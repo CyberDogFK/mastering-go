@@ -28,7 +28,7 @@ func main() {
 	}
 	min, max := n, n
 
-	for i := 2; i < len(arguments); i++ {
+	for i := 1; i < len(arguments); i++ {
 		n, err := strconv.ParseFloat(arguments[i], 64)
 		if err == nil {
 			if n < min {
@@ -40,4 +40,6 @@ func main() {
 		}
 	}
 
+	fmt.Println("Min:", min)
+	fmt.Println("Max:", max)
 }
