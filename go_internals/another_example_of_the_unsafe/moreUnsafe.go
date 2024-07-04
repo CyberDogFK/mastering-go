@@ -16,4 +16,9 @@ func main() {
 		fmt.Print(*pointer, " ")
 		memoryAddress = uintptr(unsafe.Pointer(pointer)) + unsafe.Sizeof(array[0])
 	}
+	fmt.Println()
+	pointer = (*int)(unsafe.Pointer(memoryAddress))
+	fmt.Print("One more: ", *pointer, " ")
+	memoryAddress = uintptr(unsafe.Pointer(pointer)) + unsafe.Sizeof(array[0])
+	fmt.Println()
 }
